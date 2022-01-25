@@ -23,6 +23,7 @@
         "xutility": "cpp",
         "ostream": "cpp",
         "thread": "cpp",
-        "compare": "cpp"
+        "compare": "cpp",
+        "iostream": "cpp"
     }
 }

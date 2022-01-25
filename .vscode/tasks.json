@@ -11,7 +11,8 @@
 				"/nologo",
 				"/Fe:",
 				"${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
-				"${file}"
+				"${file}",
+				"${fileDirname}\\source\\**.cpp"
 			],
 			"options": {
 				"cwd": "${fileDirname}\\build"
