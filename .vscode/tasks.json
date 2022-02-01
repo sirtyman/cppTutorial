@@ -12,7 +12,7 @@
 				"/Fe:",
 				"${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
 				"${file}",
-				"${fileDirname}\\source\\**.cpp"
+				"${fileDirname}\\**.cpp"
 			],
 			"options": {
 				"cwd": "${fileDirname}\\build"

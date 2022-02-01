@@ -24,6 +24,7 @@
         "ostream": "cpp",
         "thread": "cpp",
         "compare": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "algorithm": "cpp"
     }
 }
