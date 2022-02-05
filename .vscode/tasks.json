@@ -3,12 +3,28 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"label": "C/C++: cl.exe kompiluj aktywny plik",
+			"label": "C/C++: cl.exe compile active file",
 			"command": "cl.exe",
 			"args": [
 				"/Zi", "/EHsc", "/Fe:",
 				"${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
 				"${file}"
+			],
+			"problemMatcher": ["$msCompile"],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+		},
+
+		{
+			"type": "shell",
+			"label": "C/C++: cl.exe compile subproject",
+			"command": "cl.exe",
+			"args": [
+				"/Zi", "/EHsc", "/Fe:",
+				"${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
+				"${fileDirname}\\source\\*.cpp", "${file}"
 			],
 			"problemMatcher": ["$msCompile"],
 			"group": {
