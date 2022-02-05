@@ -25,6 +25,8 @@
         "thread": "cpp",
         "compare": "cpp",
         "iostream": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp"
     }
 }

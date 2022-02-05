@@ -38,6 +38,15 @@ int main()
     cout << vec_2d.at(0).at(1) << endl;
     cout << vec_2d.at(1).at(0) << endl;
     cout << vec_2d.at(1).at(1) << endl;
+
+    for(int i=30; i <= 100; i=i+10)
+    {
+        vec1.push_back(i);
+    }
+    
+    vector<int> vec3 {vec1};
+    cout << "-------------" << endl;
+    for(auto x: vec3) cout << x << " ";
     
     return EXIT_SUCCESS;
 }
