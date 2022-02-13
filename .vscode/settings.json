@@ -27,6 +27,7 @@
         "iostream": "cpp",
         "algorithm": "cpp",
         "vector": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "format": "cpp"
     }
 }
