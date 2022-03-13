@@ -7,8 +7,8 @@ using namespace std;
 class Rectangle
 {    
     public:
-        int* __a;
-        int* __b;
+        int* side_a;
+        int* side_b;
 
         Rectangle();
         Rectangle(int a, int b);
@@ -19,36 +19,42 @@ class Rectangle
 
 Rectangle::Rectangle() 
 {
-    __a = new int;
-    __b = new int;
+    side_a = new int;
+    side_b = new int;
     
-    *__a = 0;
-    *__b = 0;
+    *side_a = 0;
+    *side_b = 0;
 };
 
 Rectangle::Rectangle(int a, int b) 
 {
-    __a = new int;
-    __b = new int;
+    side_a = new int;
+    side_b = new int;
 
-    *__a = a;
-    *__b = b;
+    *side_a = a;
+    *side_b = b;
 };
 
 
-Rectangle::Rectangle(const Rectangle& rhs) 
+// Rectangle::Rectangle(const Rectangle& rhs) 
+// {
+//     side_a = new int;
+//     side_b = new int;
+
+//     *side_a = *(rhs.side_a);
+//     *side_b = *(rhs.side_b);
+// };
+
+// Copy constructor with delegation
+Rectangle::Rectangle(const Rectangle& rhs) : Rectangle {*rhs.side_a, *rhs.side_b} 
 {
-    __a = new int;
-    __b = new int;
 
-    *__a = *(rhs.__a);
-    *__b = *(rhs.__b);
-};
+}
 
 Rectangle::~Rectangle() 
 {
-    delete __a;
-    delete __b;
+    delete side_a;
+    delete side_b;
 };
 
 
@@ -59,8 +65,8 @@ int main()
     // However, destructor will try to free the same memory range twice et the end (for rec1, rec2 objects)
     Rectangle rec1 = rec2;  
 
-    cout << "Address of a value(rec1): " << rec1.__a << " ; address a value(rec2): " << rec2.__a << endl;
-    cout << "Address of b value(rec1): " << rec1.__b << " ; address b value(rec2): " << rec2.__b << endl;
+    cout << "Address of a value(rec1): " << rec1.side_a << " ; address a value(rec2): " << rec2.side_a << endl;
+    cout << "Address of b value(rec1): " << rec1.side_b << " ; address b value(rec2): " << rec2.side_b << endl;
 
 
     return EXIT_SUCCESS;
